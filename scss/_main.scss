@@ -1,3 +1,44 @@
-main{
-    height: 100vh;
+main {
+    section.introduction {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.45fr 1.55fr;
+        grid-template-areas: 'quotation''about-me';
+
+        div.quotation {
+            grid-area: quotation;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                flex-basis: 85vw;
+                font-size: 34px;
+                font-weight: 400;
+                line-height: 1.3em;
+            }
+        }
+
+        section.about-me {
+            grid-area: about-me;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+
+            div {
+                flex-basis: 80vw;
+                margin: 0 auto 65px auto;
+
+                p {
+                    font-size: 15px;
+                }
+
+                :last-child {
+                    margin-top: 6px;
+                    line-height: 1.6em;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
 }
