@@ -41,4 +41,95 @@ main {
             }
         }
     }
+
+    section.offer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.6fr 0.6fr 0.6fr;
+        grid-template-areas: 'proffer''ui''web''seo';
+        padding: 60px 20px;
+        background-color: #000;
+        color: white;
+
+        div {
+            display: flex;
+            flex-flow: row wrap;
+            margin-bottom: 100px;
+
+            p {
+                font-size: 15px;
+                line-height: 1.4em;
+            }
+
+            p.screen {
+                display: none;
+            }
+
+            h4 {
+                margin: 22px 0 35px 0;
+                font-size: 26px;
+                font-weight: 300;
+                line-height: 1.2em;
+            }
+
+            div.wrap {
+                flex-direction: column;
+                margin: 0;
+            }
+        }
+
+        div.proffer::before {
+            content: "";
+            height: 1px;
+            width: 100%;
+            background-color: #fff;
+            margin-bottom: 15px;
+        }
+
+        div.proffer {
+            grid-area: proffer;
+            justify-content: space-between;
+
+            p {
+                text-transform: uppercase;
+            }
+
+            h3 {
+                flex-basis: 60vw;
+                font-size: 23px;
+                font-weight: 400;
+                line-height: 1em;
+            }
+        }
+
+        div.ui,
+        div.web,
+        div.seo {
+            >p {
+                width: 100%;
+            }
+
+            >p::after {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: #fff;
+                margin-top: 8px;
+            }
+        }
+
+        div.ui {
+            grid-area: ui;
+        }
+
+        div.web {
+            grid-area: web;
+        }
+
+        div.seo {
+            grid-area: seo;
+            margin-bottom: 40px;
+        }
+    }
 }
