@@ -132,4 +132,42 @@ main {
             margin-bottom: 40px;
         }
     }
+
+    section.projects {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 0.75fr;
+        grid-template-areas: 'projects''first';
+        height: 100vh;
+        padding: 45px 20px;
+
+        h3 {
+            grid-area: projects;
+            font-size: 26px;
+            font-weight: 400;
+        }
+
+        div {
+            grid-area: first;
+
+            p {
+                font-size: 15px;
+            }
+
+            p:first-child::before {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: #000;
+                margin-bottom: 10px;
+            }
+
+            p+p {
+                color: #7C7C7C;
+                font-weight: 300;
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
