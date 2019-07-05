@@ -1,0 +1,24 @@
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-areas: 'cooperation''contact''social''copy';
+    height: 80vh;
+
+    // background-color: #000;
+    div.cooperation {
+        grid-area: cooperation;
+    }
+
+    div.contact {
+        grid-area: contact;
+    }
+
+    div.social {
+        grid-area: social;
+    }
+
+    h5 {
+        grid-area: copy
+    }
+}
