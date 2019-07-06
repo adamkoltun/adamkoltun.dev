@@ -1,24 +1,65 @@
 footer {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-rows: 0.35fr 0.4fr 0.15fr 0.1fr;
     grid-template-areas: 'cooperation''contact''social''copy';
-    height: 80vh;
+    height: 90vh;
+    padding: 0 20px;
+    background-color: #000;
 
-    // background-color: #000;
     div.cooperation {
         grid-area: cooperation;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.1em;
+        }
+
+        h3+h3 {
+            margin-top: 8px;
+            font-size: 20px;
+            font-weight: 300;
+            color: #C1C1C1;
+        }
     }
 
     div.contact {
         grid-area: contact;
+
+        h4 {
+            font-size: 18px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        h4.data {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #C1C1C1;
+        }
     }
 
     div.social {
         grid-area: social;
+        display: flex;
+        align-items: flex-end;
+
+        img {
+            margin-right: 8px;
+        }
     }
 
     h5 {
-        grid-area: copy
+        display: flex;
+        align-items: center;
+        grid-area: copy;
+        font-size: 14px;
+        font-weight: 300;
+        color: #fff;
     }
 }
