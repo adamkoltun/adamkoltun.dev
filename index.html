@@ -8,12 +8,21 @@
     <title>Adam Koltun</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=latin-ext"
         rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/sal.js/dist/sal.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+    <nav class="mobile">
+        <ul data-sal="slide-right" data-sal-duration="400" data-sal-delay="300" data-sal-easing="ease-out">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">O mnie</a></li>
+            <li><a href="#">Oferta</a></li>
+            <li><a href="#">Projekty</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </nav>
     <header>
-        <nav></nav>
         <section class="top-bar">
             <div class="hamburger">
                 <span></span>
@@ -148,6 +157,8 @@
             <img src="images/github-white.svg" height="30px" width="30px" alt=""></div>
         <h5>Adam Kołtun &copy; 2019</h5>
     </footer>
+    <script src="node_modules/sal.js/dist/sal.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

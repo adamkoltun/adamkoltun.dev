@@ -13,25 +13,44 @@ header {
     height: 50px;
     width: 100vw;
     background-color: #fff;
+    transition: background-color .3s .1s linear;
 
     div.hamburger {
       padding: 12px 24px;
+      z-index: 999;
 
-      span::before,
+      span,
       span::after {
         content: '';
         display: block;
         width: 22px;
         height: 1px;
         background-color: #000;
-      }
-
-      span::before {
-        transform: translateY(-3px)
+        transition: transform .3s .1s linear, background-color .1s linear;
       }
 
       span::after {
-        transform: translateY(3px)
+        transform: translateY(6px)
+      }
+    }
+  }
+
+  section.top-bar.on {
+    background-color: transparent;
+
+    div.hamburger {
+
+      span,
+      span::after {
+        background-color: #fff;
+      }
+
+      span {
+        transform: rotate(45deg)
+      }
+
+      span::after {
+        transform: translate(0) rotate(-90deg)
       }
     }
   }
