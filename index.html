@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Adam Koltun</title>
+    <title>Adam Koltun - Web Developer</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=latin-ext"
         rel="stylesheet">
     <link rel="stylesheet" href="node_modules/sal.js/dist/sal.css">
@@ -14,12 +14,12 @@
 
 <body>
     <nav class="mobile">
-        <ul data-sal="slide-right" data-sal-duration="400" data-sal-delay="300" data-sal-easing="ease-out">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">O mnie</a></li>
-            <li><a href="#">Oferta</a></li>
-            <li><a href="#">Projekty</a></li>
-            <li><a href="#">Kontakt</a></li>
+        <ul data-sal="slide-right" data-sal-duration="400" data-sal-delay="400" data-sal-easing="ease-out">
+            <li><a class="home" href="">Home</a></li>
+            <li><a class="about-me" href="#">O mnie</a></li>
+            <li><a class="offer" href="#">Oferta</a></li>
+            <li><a class="projects" href="#">Projekty</a></li>
+            <li><a class="contact" href="#">Kontakt</a></li>
         </ul>
     </nav>
     <header>
@@ -28,10 +28,14 @@
                 <span></span>
             </div>
         </section>
-        <section class="introduction">
-            <h1>Adam Kołtun</h1>
-            <h2>Freelance</h2>
-            <h2>Web Developer</h2>
+        <section class="introduction" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300"
+            data-sal-easing="ease-out-bounce">
+            <h1 data-sal="slide-up" data-sal-duration="400" data-sal-delay="500" data-sal-easing="ease-out-bounce">Adam
+                Kołtun</h1>
+            <h2>
+                Freelance</h2>
+            <h2>Web
+                Developer</h2>
         </section>
         <section class="essential">
             <div class="features">
@@ -51,7 +55,7 @@
             <div class="quotation">
                 <h3>” Jakość wykonania jest równie ważna jak sam fakt wykonania.”</h3>
             </div>
-            <section class="about-me">
+            <section id="about-me" class="about-me">
                 <div>
                     <p>O mnie</p>
                     <p>Pasjo­nat nie­ustan­nie pogłę­bia­jący wie­dzę w inte­re­su­ją­cej go dzie­dzi­nie, którą jest
@@ -94,7 +98,7 @@
                 </div>
             </section>
         </section>
-        <section class="offer">
+        <section id="offer" class="offer">
             <div class="proffer">
                 <p>Oferta</p>
                 <h3>Kompleksowe stworzenie strony internetowej</h3>
@@ -132,7 +136,7 @@
                 </div>
             </div>
         </section>
-        <section class="projects">
+        <section id="projects" class="projects">
             <h3>Projekty</h3>
             <div>
                 <p>Projekt</p>
@@ -141,7 +145,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="contact">
         <div class="cooperation">
             <h3>Zainteresowany współpracą?</h3>
             <h3>Skontaktuj się ze mną</h3>
