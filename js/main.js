@@ -15,6 +15,20 @@ hamburger.addEventListener('click', () => {
     navMobile.classList.toggle('on');
 })
 
+// hide bar
+
+let prevScrollPosition = window.pageYOffset;
+
+window.onscroll = () => {
+    currentScrollPosition = window.pageYOffset;
+    if (prevScrollPosition > currentScrollPosition) {
+        topBar.style.transform = 'translateY(0)';
+    } else {
+        topBar.style.transform = 'translateY(-100%)';
+    }
+    prevScrollPosition = currentScrollPosition;
+}
+
 // Navigation
 
 const nav = document.querySelectorAll('li a');

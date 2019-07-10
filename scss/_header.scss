@@ -13,7 +13,7 @@ header {
     height: 50px;
     width: 100vw;
     background-color: #fff;
-    transition: background-color .3s .1s linear;
+    transition: background-color .3s .1s linear, transform .3s linear;
 
     div.hamburger {
       padding: 12px 24px;
