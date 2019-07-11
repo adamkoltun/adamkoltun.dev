@@ -1,9 +1,3 @@
-// Animations
-
-sal({
-    once: false,
-})
-
 // Mobile menu & hamburger
 
 const topBar = document.querySelector('.top-bar');
@@ -13,9 +7,10 @@ const navMobile = document.querySelector('.mobile');
 hamburger.addEventListener('click', () => {
     topBar.classList.toggle('on');
     navMobile.classList.toggle('on');
+    document.body.classList.toggle('close')
 })
 
-// hide bar
+// Hide top-bar
 
 let prevScrollPosition = window.pageYOffset;
 
@@ -44,6 +39,7 @@ scrollTo = element => {
 closeNav = () => {
     topBar.classList.remove('on');
     navMobile.classList.remove('on');
+    document.body.classList.remove('close');
 }
 
 nav.forEach(anchor => {
