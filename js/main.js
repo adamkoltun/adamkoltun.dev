@@ -28,11 +28,13 @@ window.onscroll = () => {
 
 const nav = document.querySelectorAll('li a');
 
-scrollTo = element => {
+const takeRightOffsetTop = section => section.className === 'projects' ? section.offsetTop : section.offsetTop - 45;
+
+scrollToSection = section => {
     window.scroll({
         behavior: 'smooth',
         left: 0,
-        top: element.offsetTop
+        top: takeRightOffsetTop(section)
     });
 }
 
@@ -48,7 +50,7 @@ nav.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const section = document.getElementById(`${this.className}`);
-            scrollTo(section);
+            scrollToSection(section);
             closeNav();
         })
     }
