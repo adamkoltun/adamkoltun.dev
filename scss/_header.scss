@@ -1,7 +1,7 @@
 header {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1.5fr 0.5fr;
+  grid-template-rows: 1.45fr 0.55fr;
   grid-template-areas: 'introduction''essential';
   height: 100vh;
 
@@ -97,9 +97,8 @@ header {
     grid-area: essential;
     display: flex;
     flex-flow: column wrap;
-    //row-reverse; przy landscape
     justify-content: space-between;
-    margin: 0 0 10px 20px;
+    margin: 10px 20px;
 
     div.features {
       p {
@@ -113,7 +112,178 @@ header {
     div.social-media {
       img {
         margin-right: 8px;
+        height: 30px;
+        width: 30px;
+      }
+
+      img:nth-last-of-type(1) {
+        margin-right: 0;
       }
     }
   }
-}
+
+  @media (orientation: landscape) {
+    section.essential {
+      flex-flow: row-reverse wrap;
+      align-items: center;
+
+      div.social-media {
+        align-self: flex-end;
+
+        img {
+          height: 34px;
+          width: 34px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 360px) and (orientation: portrait) {
+    grid-template-rows: 1.5fr 0.5fr;
+
+    section.introduction {
+      div.container {
+        h1 {
+          font-size: 22px;
+        }
+
+        h2 {
+          font-size: 36px
+        }
+      }
+    }
+
+    section.essential {
+      div.features {
+        p {
+          font-size: 17px;
+        }
+      }
+
+      div.social-media {
+        img {
+          height: 34px;
+          width: 34px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 730px) and (orientation: landscape) {
+    section.introduction {
+      div.container {
+        h1 {
+          font-size: 22px;
+        }
+
+        h2 {
+          font-size: 36px
+        }
+      }
+    }
+
+    section.essential {
+      div.features {
+        p {
+          font-size: 17px;
+        }
+      }
+
+      div.social-media {
+        img {
+          height: 40px;
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  @media(min-width: 768px) and (orientation: portrait) {
+    section.top-bar {
+      div.hamburger {
+        padding: 20px 24px;
+
+        span,
+        span::after {
+          width: 34px;
+          height: 2px;
+        }
+      }
+    }
+
+    section.introduction {
+      div.container {
+        h1 {
+          font-size: 36px;
+        }
+
+        h2 {
+          font-size: 54px;
+        }
+      }
+    }
+
+    section.essential {
+      margin: 20px 40px;
+
+      div.features {
+        p {
+          font-size: 26px;
+        }
+      }
+
+      div.social-media {
+        img {
+          margin-right: 14px;
+          height: 50px;
+          width: 50px;
+        }
+
+        img:nth-last-of-type(1) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @media(min-width: 1024px) and (orientation: portrait) {
+    section.top-bar {
+      div.hamburger {
+        padding: 22px 24px;
+      }
+
+      section.introduction {
+        div.container {
+          h1 {
+            font-size: 46px;
+          }
+
+          h2 {
+            font-size: 78px;
+          }
+        }
+      }
+
+      section.essential {
+        margin: 20px 40px;
+
+        div.features {
+          p {
+            font-size: 36px;
+          }
+        }
+
+        div.social-media {
+          img {
+            margin-right: 20px;
+            height: 60px;
+            width: 60px;
+          }
+
+          img:nth-last-of-type(1) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
