@@ -248,42 +248,55 @@ header {
 
   @media(min-width: 1024px) and (orientation: portrait) {
     section.top-bar {
+      height: 100px;
+
       div.hamburger {
-        padding: 22px 24px;
+        padding: 30px 30px;
+
+        span,
+        span::after {
+          width: 45px;
+          height: 2px;
+        }
+
+        span::after {
+          transform: translateY(10px)
+        }
       }
+    }
 
-      section.introduction {
-        div.container {
-          h1 {
-            font-size: 46px;
-          }
+    section.introduction {
+      div.container {
+        h1 {
+          font-size: 50px;
+        }
 
-          h2 {
-            font-size: 78px;
-          }
+        h2 {
+          font-size: 78px;
+        }
+      }
+    }
+
+    section.essential {
+      margin: 20px 40px;
+
+      div.features {
+        p {
+          font-size: 34px;
         }
       }
 
-      section.essential {
-        margin: 20px 40px;
-
-        div.features {
-          p {
-            font-size: 36px;
-          }
+      div.social-media {
+        img {
+          margin-right: 24px;
+          height: 70px;
+          width: 70px;
         }
 
-        div.social-media {
-          img {
-            margin-right: 20px;
-            height: 60px;
-            width: 60px;
-          }
-
-          img:nth-last-of-type(1) {
-            margin-right: 0;
-          }
+        img:nth-last-of-type(1) {
+          margin-right: 0;
         }
       }
     }
   }
+}

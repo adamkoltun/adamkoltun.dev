@@ -23,7 +23,63 @@ nav.mobile {
             }
         }
     }
+
+    @media (orientation: landscape) {
+        ul {
+            li {
+                a {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 360px) and (orientation: portrait) {
+        ul {
+            li {
+                a {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 640px) and (orientation: landscape) {
+        ul {
+            li {
+                a {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) and (orientation: portrait) {
+        ul {
+            li {
+                padding: 12px 0;
+
+                a {
+                    font-size: 54px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1024px) and (orientation: portrait) {
+        ul {
+            li {
+                padding: 14px 0;
+
+                a {
+                    font-size: 78px;
+                }
+            }
+        }
+    }
 }
+
+
 
 nav.mobile.on {
     transform: translateY(0);
