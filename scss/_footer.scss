@@ -1,7 +1,7 @@
 footer {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.35fr 0.4fr 0.15fr 0.1fr;
+    grid-template-rows: 0.4fr 0.4fr 0.1fr 0.1fr;
     grid-template-areas: 'cooperation''contact''social''copy';
     height: 90vh;
     padding: 0 20px;
@@ -52,14 +52,210 @@ footer {
         img {
             margin-right: 8px;
         }
+
+        img:nth-last-of-type(1) {
+            margin-right: 0;
+        }
     }
 
     h5 {
+        grid-area: copy;
         display: flex;
         align-items: center;
-        grid-area: copy;
         font-size: 14px;
         font-weight: 300;
         color: #fff;
+    }
+
+    @media (orientation: landscape) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.35fr 0.4fr 0.25fr;
+        grid-template-areas: 'cooperation .''. contact''social copy';
+
+        div.cooperation {
+            justify-content: flex-end;
+
+            h3 {
+                font-size: 23px;
+            }
+
+            h3+h3 {
+                font-size: 19px;
+            }
+        }
+
+        div.contact {
+            h4 {
+                font-size: 16px;
+            }
+
+            h4.data {
+                margin-top: 10px;
+                font-size: 14px;
+            }
+        }
+
+        div.social {
+            align-items: center;
+        }
+
+        h5 {
+            font-size: 13px;
+            align-items: center;
+        }
+    }
+
+    @media (min-width: 360px) and (orientation: portrait) {
+        div.social {
+            img {
+                height: 34px;
+                width: 34px;
+            }
+        }
+    }
+
+    @media (min-width: 640px) and (orientation: landscape) {
+        padding: 0 30px;
+
+        div.cooperation {
+            h3 {
+                font-size: 24px;
+            }
+
+            h3+h3 {
+                font-size: 20px;
+            }
+        }
+
+        div.contact {
+            h4 {
+                font-size: 18px;
+            }
+
+            h4.data {
+                margin-top: 15px;
+                font-size: 16px;
+            }
+        }
+
+        div.social {
+            img {
+                height: 34px;
+                width: 34px;
+            }
+        }
+
+        h5 {
+            font-size: 14px;
+        }
+    }
+
+    @media (min-width: 730px) and (orientation: landscape) {
+        div.cooperation {
+            h3 {
+                font-size: 28px;
+            }
+
+            h3+h3 {
+                font-size: 22px;
+            }
+        }
+
+        div.contact {
+            h4 {
+                font-size: 20px;
+            }
+
+            h4.data {
+                margin-top: 20px;
+                font-size: 18px;
+            }
+        }
+
+        div.social {
+            img {
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+        h5 {
+            font-size: 15px;
+        }
+    }
+
+    @media(min-width: 768px) and (orientation: portrait) {
+        padding: 0 25px;
+
+        div.cooperation {
+            h3 {
+                font-size: 40px;
+            }
+
+            h3+h3 {
+                font-size: 30px;
+            }
+        }
+
+        div.contact {
+            h4 {
+                font-size: 28px;
+            }
+
+            h4.data {
+                margin-top: 35px;
+                font-size: 26px;
+            }
+        }
+
+        div.social {
+            img {
+                margin-right: 14px;
+                height: 50px;
+                width: 50px;
+            }
+        }
+
+        h5 {
+            font-size: 20px;
+        }
+    }
+
+    @media (min-width: 1024px) and (orientation: portrait) {
+        padding: 0 60px;
+
+        div.cooperation {
+            h3 {
+                font-size: 60px;
+            }
+
+            h3+h3 {
+                margin-top: 20px;
+                font-size: 54px;
+            }
+        }
+
+        div.contact {
+            h4 {
+                font-size: 38px;
+            }
+
+            h4.data {
+                margin-top: 45px;
+                font-size: 36px;
+            }
+        }
+
+        div.social {
+            img {
+                margin-right: 24px;
+                height: 70px;
+                width: 70px;
+            }
+        }
+
+        h5 {
+            font-size: 30px;
+        }
     }
 }

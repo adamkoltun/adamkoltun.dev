@@ -84,7 +84,6 @@ header {
         animation: slideUp .5s ease-in-out both;
       }
     }
-
   }
 
   @keyframes slideUp {
@@ -105,7 +104,6 @@ header {
         font-size: 15px;
         line-height: 1.6em;
         font-weight: 300;
-
       }
     }
 
@@ -295,6 +293,100 @@ header {
 
         img:nth-last-of-type(1) {
           margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @media(min-width: 1024px) and (orientation: landscape) {
+    grid-template-rows: 1.6fr 0.4fr;
+
+    section.introduction {
+      div.container {
+        h2 {
+          font-size: 56px;
+        }
+      }
+    }
+
+    section.essential {
+      margin: 10px 60px;
+
+      div.features {
+        p {
+          font-size: 26px;
+          line-height: 1.3em;
+        }
+      }
+
+      div.social-media {
+        align-self: center;
+
+        img {
+          margin-right: 14px;
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+  }
+
+  @media(min-width: 1280px) {
+    section.introduction {
+      div.container {
+        h2 {
+          font-size: 60px;
+        }
+      }
+    }
+
+    section.essential {
+      margin: 10px 65px;
+
+      div.features {
+        p {
+          font-size: 28px;
+        }
+      }
+
+      div.social-media {
+        img {
+          margin-right: 18px;
+          height: 55px;
+          width: 55px;
+        }
+      }
+    }
+  }
+
+  @media(min-width: 1600px) {
+    section.introduction {
+      div.container {
+        h1 {
+          padding-bottom: 20px;
+          font-size: 28px;
+        }
+
+        h2 {
+          font-size: 78px;
+        }
+      }
+    }
+
+    section.essential {
+      margin: 10px 125px;
+
+      div.features {
+        p {
+          font-size: 36px;
+        }
+      }
+
+      div.social-media {
+        img {
+          margin-right: 20px;
+          height: 60px;
+          width: 60px;
         }
       }
     }
