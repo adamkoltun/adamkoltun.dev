@@ -53,6 +53,34 @@ main {
         background-color: #000;
         color: white;
 
+        div.proffer::before {
+            content: "";
+            height: 1px;
+            width: 100%;
+            background-color: #fff;
+            margin-bottom: 15px;
+        }
+
+        div.proffer {
+            grid-area: proffer;
+            justify-content: space-between;
+
+            p {
+                text-transform: uppercase;
+            }
+
+            h3 {
+                flex-basis: 60vw;
+                font-size: 23px;
+                font-weight: 400;
+                line-height: 1em;
+            }
+        }
+
+        p.aside {
+            display: none;
+        }
+
         div {
             display: flex;
             flex-flow: row wrap;
@@ -77,30 +105,6 @@ main {
             div.wrap {
                 flex-direction: column;
                 margin: 0;
-            }
-        }
-
-        div.proffer::before {
-            content: "";
-            height: 1px;
-            width: 100%;
-            background-color: #fff;
-            margin-bottom: 15px;
-        }
-
-        div.proffer {
-            grid-area: proffer;
-            justify-content: space-between;
-
-            p {
-                text-transform: uppercase;
-            }
-
-            h3 {
-                flex-basis: 60vw;
-                font-size: 23px;
-                font-weight: 400;
-                line-height: 1em;
             }
         }
 
@@ -464,7 +468,6 @@ main {
     @media (min-width: 1024px) and (orientation: landscape) {
         section.introduction {
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 0.45fr 1.55fr;
             grid-template-areas: 'quotation quotation quotation .''. about-me about-me about-me';
             margin: 0 60px 60px 0;
 
@@ -491,6 +494,93 @@ main {
                     }
                 }
             }
+        }
+
+        section.offer {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 'proffer proffer''. ui''. web''. seo';
+            padding: 60px 60px;
+
+            div.proffer::before {
+                margin-bottom: 24px;
+            }
+
+            div.proffer {
+                justify-content: flex-start;
+
+                h3 {
+                    margin: 60px 0 40px 60px;
+                    flex-basis: 30vw;
+                    font-size: 34px;
+                }
+            }
+
+            p.aside {
+                display: block;
+                font-size: 14px;
+            }
+
+            p.aside::after {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 75%;
+                background-color: #fff;
+                margin-top: 24px;
+            }
+
+            div {
+
+                //         display: flex;
+                //         flex-flow: row wrap;
+                //         margin-bottom: 90px;
+                p {
+                    font-size: 14px;
+                    //             line-height: 1.4em;
+                }
+
+                p.screen {
+                    display: block;
+                }
+
+                p.mobile {
+                    display: none;
+                }
+
+                //         h4 {
+                //             margin: 22px 0 35px 0;
+                //             font-size: 26px;
+                //             font-weight: 300;
+                //             line-height: 1.4em;
+                //         }
+
+                //         div.wrap {
+                //             flex-direction: column;
+                //             margin: 0;
+                //         }
+                //     }
+            }
+
+            div.ui,
+            div.web,
+            div.seo {
+                p.screen::after {
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    width: 100%;
+                    background-color: #fff;
+                    margin-top: 24px;
+                }
+            }
+
+            // div.web {
+            //     div.wrap {
+            //         flex-flow: row wrap;
+            //         justify-content: space-between;
+
+            //     }
+            // }
         }
     }
 }
