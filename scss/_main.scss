@@ -31,10 +31,11 @@ main {
                 margin-bottom: 65px;
 
                 p {
-                    font-size: 15px;
+                    font-size: 16px;
                 }
 
                 :last-child {
+                    color: #6f6f6f;
                     margin-top: 6px;
                     line-height: 1.6em;
                     font-weight: 300;
@@ -454,6 +455,39 @@ main {
                 div.project {
                     p {
                         font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1024px) and (orientation: landscape) {
+        section.introduction {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 0.45fr 1.55fr;
+            grid-template-areas: 'quotation quotation quotation .''. about-me about-me about-me';
+            margin: 0 60px 60px 0;
+
+            div.quotation {
+                height: 50vh;
+
+                h3 {
+                    font-size: 48px;
+                }
+            }
+
+            section.about-me {
+                justify-content: space-between;
+                align-items: center;
+                height: 100vh;
+                margin-top: 0;
+
+                div {
+                    flex-basis: 28vw;
+                    margin-bottom: 0px;
+
+                    p {
+                        font-size: 15px;
                     }
                 }
             }
