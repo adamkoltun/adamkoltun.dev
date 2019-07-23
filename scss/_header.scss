@@ -301,6 +301,10 @@ header {
   @media(min-width: 1024px) and (orientation: landscape) {
     grid-template-rows: 1.6fr 0.4fr;
 
+    section.top-bar {
+      display: none;
+    }
+
     section.introduction {
       div.container {
         h2 {
