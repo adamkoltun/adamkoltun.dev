@@ -105,13 +105,16 @@ header {
     }
 
     div.social-media {
-      img {
+      a {
         margin-right: 8px;
-        height: 30px;
-        width: 30px;
+
+        img {
+          height: 30px;
+          width: 30px;
+        }
       }
 
-      img:nth-last-of-type(1) {
+      a:nth-last-of-type(1) {
         margin-right: 0;
       }
     }
@@ -125,9 +128,11 @@ header {
       div.social-media {
         align-self: flex-end;
 
-        img {
-          height: 34px;
-          width: 34px;
+        a {
+          img {
+            height: 34px;
+            width: 34px;
+          }
         }
       }
     }
@@ -156,9 +161,11 @@ header {
       }
 
       div.social-media {
-        img {
-          height: 34px;
-          width: 34px;
+        a {
+          img {
+            height: 34px;
+            width: 34px;
+          }
         }
       }
     }
@@ -185,9 +192,11 @@ header {
       }
 
       div.social-media {
-        img {
-          height: 40px;
-          width: 40px;
+        a {
+          img {
+            height: 40px;
+            width: 40px;
+          }
         }
       }
     }
@@ -228,13 +237,16 @@ header {
       }
 
       div.social-media {
-        img {
+        a {
           margin-right: 14px;
-          height: 50px;
-          width: 50px;
+
+          img {
+            height: 50px;
+            width: 50px;
+          }
         }
 
-        img:nth-last-of-type(1) {
+        a:nth-last-of-type(1) {
           margin-right: 0;
         }
       }
@@ -282,13 +294,16 @@ header {
       }
 
       div.social-media {
-        img {
+        a {
           margin-right: 24px;
-          height: 70px;
-          width: 70px;
+
+          img {
+            height: 70px;
+            width: 70px;
+          }
         }
 
-        img:nth-last-of-type(1) {
+        a:nth-last-of-type(1) {
           margin-right: 0;
         }
       }
@@ -323,10 +338,13 @@ header {
       div.social-media {
         align-self: center;
 
-        img {
+        a {
           margin-right: 16px;
-          height: 45px;
-          width: 45px;
+
+          img {
+            height: 45px;
+            width: 45px;
+          }
         }
       }
     }
@@ -351,10 +369,13 @@ header {
       }
 
       div.social-media {
-        img {
+        a {
           margin-right: 20px;
-          height: 50px;
-          width: 50px;
+
+          img {
+            height: 50px;
+            width: 50px;
+          }
         }
       }
     }
@@ -384,10 +405,13 @@ header {
       }
 
       div.social-media {
-        img {
+        a {
           margin-right: 22px;
-          height: 55px;
-          width: 55px;
+
+          img {
+            height: 55px;
+            width: 55px;
+          }
         }
       }
     }
