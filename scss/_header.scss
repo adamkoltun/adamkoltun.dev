@@ -16,6 +16,7 @@ header {
     background-color: #fff;
     transition: background-color .3s .1s linear, transform .3s ease;
     will-change: transform;
+    z-index: 1;
 
     div.hamburger {
       padding: 12px 24px;
