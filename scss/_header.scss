@@ -4,6 +4,7 @@ header {
   grid-template-rows: 1.45fr 0.55fr;
   grid-template-areas: 'introduction''essential';
   height: 100vh;
+  overflow: hidden;
 
   section.top-bar {
     position: fixed;
@@ -74,21 +75,15 @@ header {
       h1 {
         font-size: 20px;
         padding-bottom: 8px;
-        animation: slideUp .3s .4s ease-in-out both;
+        animation: slideUp .3s .3s ease-out both;
       }
 
       h2 {
         font-size: 34px;
         line-height: 1.1em;
         text-transform: uppercase;
-        animation: slideUp .5s ease-in-out both;
+        animation: slideUp .3s ease-out both;
       }
-    }
-  }
-
-  @keyframes slideUp {
-    100% {
-      transform: translateY(0)
     }
   }
 
@@ -98,6 +93,8 @@ header {
     flex-flow: column wrap;
     justify-content: space-between;
     margin: 10px 20px;
+    transform: translateY(105%);
+    animation: slideUp .3s .6s ease-out both;
 
     div.features {
       p {
@@ -393,6 +390,18 @@ header {
           width: 55px;
         }
       }
+    }
+  }
+
+  @keyframes slideUp {
+    100% {
+      transform: translateY(0)
+    }
+  }
+
+  @keyframes fadeIn {
+    100% {
+      opacity: 1;
     }
   }
 }
