@@ -2,11 +2,11 @@
 
 const topBar = document.querySelector('.top-bar');
 const hamburger = document.querySelector('.hamburger');
-const navMobile = document.querySelector('.mobile');
+const navigation = document.querySelector('.nav');
 
 hamburger.addEventListener('click', () => {
     topBar.classList.toggle('on');
-    navMobile.classList.toggle('on');
+    navigation.classList.toggle('on');
     document.body.classList.toggle('close')
 })
 
@@ -28,19 +28,17 @@ window.onscroll = () => {
 
 const nav = document.querySelectorAll('li a');
 
-const takeRightOffsetTop = section => section.className === 'projects' ? section.offsetTop : section.offsetTop - 45;
-
 scrollToSection = section => {
     window.scroll({
         behavior: 'smooth',
         left: 0,
-        top: takeRightOffsetTop(section)
+        top: section.offsetTop
     });
 }
 
 closeNav = () => {
     topBar.classList.remove('on');
-    navMobile.classList.remove('on');
+    navigation.classList.remove('on');
     document.body.classList.remove('close');
 }
 

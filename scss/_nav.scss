@@ -1,4 +1,4 @@
-nav.mobile {
+nav.nav {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -104,6 +104,6 @@ nav.mobile {
     }
 }
 
-nav.mobile.on {
+nav.nav.on {
     transform: translateY(0);
 }
