@@ -142,31 +142,34 @@ main {
     section.projects {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.25fr 0.75fr;
-        grid-template-areas: 'projects''first';
-        height: 100vh;
-        padding: 45px 20px;
+        grid-template-rows: 0.2fr 0.8fr;
+        grid-template-areas: 'projects''elements';
+        min-height: 100vh;
+        padding: 0 20px;
 
         h3 {
             grid-area: projects;
+            display: flex;
+            align-items: center;
             font-size: 26px;
             font-weight: 400;
         }
 
         div.wrapper {
-            grid-area: first;
+            grid-area: elements;
             display: flex;
             flex-flow: row wrap;
             justify-content: flex-start;
 
             div.project {
-                margin-right: 15px;
+                flex-basis: 100%;
+                margin-bottom: 60px;
 
                 p {
                     font-size: 15px;
                 }
 
-                p:first-child::before {
+                &>p:first-child::before {
                     content: "";
                     display: block;
                     height: 1px;
@@ -175,6 +178,11 @@ main {
                     margin-bottom: 10px;
                 }
 
+                p+a {
+                    text-decoration: none;
+                }
+
+                p+a>p,
                 p+p {
                     color: #6f6f6f;
                     font-weight: 300;
@@ -184,6 +192,15 @@ main {
                 img {
                     height: auto;
                     width: 100%;
+                }
+
+                &.in-progress {
+
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                        width: 30%;
+                    }
                 }
             }
         }
@@ -227,11 +244,13 @@ main {
         }
 
         section.projects {
-            height: 150vh;
+            min-height: 125vh;
 
             div.wrapper {
+                justify-content: space-between;
+
                 div.project {
-                    flex-basis: 50%;
+                    flex-basis: 45%;
                 }
             }
         }
@@ -271,6 +290,10 @@ main {
                     line-height: 1.1em;
                 }
             }
+        }
+
+        section.projects {
+            min-height: 120vh;
         }
     }
 
@@ -378,18 +401,27 @@ main {
         }
 
         section.projects {
-            padding: 45px 25px;
+            grid-template-rows: 0.3fr 0.7fr;
+            padding: 0 30px;
+            min-height: 60vh;
 
             h3 {
-                font-size: 36px;
+                font-size: 40px;
             }
 
             div.wrapper {
+                justify-content: space-around;
+
                 div.project {
-                    flex-basis: 50%;
+                    flex-basis: 45%;
 
                     p {
                         font-size: 20px;
+                    }
+
+                    p+a>p,
+                    p+p {
+                        margin-bottom: 15px;
                     }
                 }
             }
@@ -449,13 +481,15 @@ main {
         }
 
         section.projects {
-            padding: 65px 45px;
+            padding: 0 45px;
 
             h3 {
                 font-size: 56px;
             }
 
             div.wrapper {
+                justify-content: space-between;
+
                 div.project {
                     p {
                         font-size: 30px;
@@ -631,9 +665,9 @@ main {
         }
 
         section.projects {
-            grid-template-rows: 0.2fr 0.8fr;
-            height: 100vh;
-            padding: 60px;
+            grid-template-rows: 0.4fr 0.6fr;
+            min-height: 100vh;
+            padding: 0 60px;
 
             h3 {
                 display: flex;
@@ -643,12 +677,7 @@ main {
             }
 
             div.wrapper {
-                display: flex;
-                align-items: center;
-
                 div.project {
-                    flex-basis: 40%;
-
                     p {
                         font-size: 15px;
                     }
@@ -715,6 +744,7 @@ main {
         }
 
         section.projects {
+
             h3 {
                 font-size: 42px;
             }
@@ -736,6 +766,20 @@ main {
             div.ui,
             div.seo {
                 width: 90%;
+            }
+        }
+
+        section.projects {
+            padding: 0 80px;
+
+            div.wrapper {
+                justify-content: flex-start;
+                padding-top: 25px;
+
+                div.project {
+                    flex-basis: 33%;
+                    margin-right: 100px;
+                }
             }
         }
     }
@@ -795,16 +839,16 @@ main {
         }
 
         section.projects {
-            padding: 80px;
+            min-height: 115vh;
 
             h3 {
                 font-size: 56px;
             }
 
             div.wrapper {
-                div.project {
-                    flex-basis: 30%;
+                padding-top: 50px;
 
+                div.project {
                     p {
                         font-size: 20px;
                     }

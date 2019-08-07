@@ -751,17 +751,23 @@ main section.projects {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 0.25fr 0.75fr;
-      grid-template-rows: 0.25fr 0.75fr;
-      grid-template-areas: "projects" "first";
-  height: 100vh;
-  padding: 45px 20px;
+  -ms-grid-rows: 0.2fr 0.8fr;
+      grid-template-rows: 0.2fr 0.8fr;
+      grid-template-areas: "projects" "elements";
+  min-height: 100vh;
+  padding: 0 20px;
 }
 
 main section.projects h3 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: projects;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 26px;
   font-weight: 400;
 }
@@ -769,7 +775,7 @@ main section.projects h3 {
 main section.projects div.wrapper {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: first;
+  grid-area: elements;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -783,14 +789,16 @@ main section.projects div.wrapper {
 }
 
 main section.projects div.wrapper div.project {
-  margin-right: 15px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: 60px;
 }
 
 main section.projects div.wrapper div.project p {
   font-size: 15px;
 }
 
-main section.projects div.wrapper div.project p:first-child::before {
+main section.projects div.wrapper div.project > p:first-child::before {
   content: "";
   display: block;
   height: 1px;
@@ -799,6 +807,11 @@ main section.projects div.wrapper div.project p:first-child::before {
   margin-bottom: 10px;
 }
 
+main section.projects div.wrapper div.project p + a {
+  text-decoration: none;
+}
+
+main section.projects div.wrapper div.project p + a > p,
 main section.projects div.wrapper div.project p + p {
   color: #6f6f6f;
   font-weight: 300;
@@ -808,6 +821,12 @@ main section.projects div.wrapper div.project p + p {
 main section.projects div.wrapper div.project img {
   height: auto;
   width: 100%;
+}
+
+main section.projects div.wrapper div.project.in-progress img {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
 }
 
 @media (orientation: landscape) {
@@ -843,11 +862,16 @@ main section.projects div.wrapper div.project img {
     margin-bottom: 25px;
   }
   main section.projects {
-    height: 150vh;
+    min-height: 125vh;
+  }
+  main section.projects div.wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   main section.projects div.wrapper div.project {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
   }
 }
 
@@ -875,6 +899,9 @@ main section.projects div.wrapper div.project img {
     -ms-flex-preferred-size: 50vw;
         flex-basis: 50vw;
     line-height: 1.1em;
+  }
+  main section.projects {
+    min-height: 120vh;
   }
 }
 
@@ -948,17 +975,28 @@ main section.projects div.wrapper div.project img {
     font-size: 28px;
   }
   main section.projects {
-    padding: 45px 25px;
+    -ms-grid-rows: 0.3fr 0.7fr;
+        grid-template-rows: 0.3fr 0.7fr;
+    padding: 0 30px;
+    min-height: 60vh;
   }
   main section.projects h3 {
-    font-size: 36px;
+    font-size: 40px;
+  }
+  main section.projects div.wrapper {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   main section.projects div.wrapper div.project {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
   }
   main section.projects div.wrapper div.project p {
     font-size: 20px;
+  }
+  main section.projects div.wrapper div.project p + a > p,
+  main section.projects div.wrapper div.project p + p {
+    margin-bottom: 15px;
   }
 }
 
@@ -1002,10 +1040,15 @@ main section.projects div.wrapper div.project img {
     font-size: 38px;
   }
   main section.projects {
-    padding: 65px 45px;
+    padding: 0 45px;
   }
   main section.projects h3 {
     font-size: 56px;
+  }
+  main section.projects div.wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   main section.projects div.wrapper div.project p {
     font-size: 30px;
@@ -1183,10 +1226,10 @@ main section.projects div.wrapper div.project img {
     margin-bottom: 105px;
   }
   main section.projects {
-    -ms-grid-rows: 0.2fr 0.8fr;
-        grid-template-rows: 0.2fr 0.8fr;
-    height: 100vh;
-    padding: 60px;
+    -ms-grid-rows: 0.4fr 0.6fr;
+        grid-template-rows: 0.4fr 0.6fr;
+    min-height: 100vh;
+    padding: 0 60px;
   }
   main section.projects h3 {
     display: -webkit-box;
@@ -1199,18 +1242,6 @@ main section.projects div.wrapper div.project img {
         -ms-flex-align: center;
             align-items: center;
     font-size: 36px;
-  }
-  main section.projects div.wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  main section.projects div.wrapper div.project {
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
   }
   main section.projects div.wrapper div.project p {
     font-size: 15px;
@@ -1274,6 +1305,20 @@ main section.projects div.wrapper div.project img {
   main section.offer div.seo {
     width: 90%;
   }
+  main section.projects {
+    padding: 0 80px;
+  }
+  main section.projects div.wrapper {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 25px;
+  }
+  main section.projects div.wrapper div.project {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+    margin-right: 100px;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -1318,14 +1363,13 @@ main section.projects div.wrapper div.project img {
     font-size: 32px;
   }
   main section.projects {
-    padding: 80px;
+    min-height: 115vh;
   }
   main section.projects h3 {
     font-size: 56px;
   }
-  main section.projects div.wrapper div.project {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
+  main section.projects div.wrapper {
+    padding-top: 50px;
   }
   main section.projects div.wrapper div.project p {
     font-size: 20px;
