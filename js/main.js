@@ -53,3 +53,7 @@ nav.forEach(anchor => {
         })
     }
 })
+
+// Animations
+
+sal()
