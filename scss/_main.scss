@@ -142,7 +142,7 @@ main {
     section.projects {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.2fr 0.8fr;
+        grid-template-rows: 0.3fr 0.8fr;
         grid-template-areas: 'projects''elements';
         min-height: 100vh;
         padding: 0 20px;
@@ -401,7 +401,6 @@ main {
         }
 
         section.projects {
-            grid-template-rows: 0.3fr 0.7fr;
             padding: 0 30px;
             min-height: 60vh;
 

@@ -751,8 +751,8 @@ main section.projects {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 0.2fr 0.8fr;
-      grid-template-rows: 0.2fr 0.8fr;
+  -ms-grid-rows: 0.3fr 0.8fr;
+      grid-template-rows: 0.3fr 0.8fr;
       grid-template-areas: "projects" "elements";
   min-height: 100vh;
   padding: 0 20px;
@@ -975,8 +975,6 @@ main section.projects div.wrapper div.project.in-progress img {
     font-size: 28px;
   }
   main section.projects {
-    -ms-grid-rows: 0.3fr 0.7fr;
-        grid-template-rows: 0.3fr 0.7fr;
     padding: 0 30px;
     min-height: 60vh;
   }
