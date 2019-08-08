@@ -1632,17 +1632,19 @@ footer h5 {
     padding: 0 25px;
   }
   footer div.cooperation h3 {
-    font-size: 40px;
+    width: 50vw;
+    font-size: 46px;
   }
   footer div.cooperation h3 + h3 {
-    font-size: 30px;
+    margin-top: 25px;
+    font-size: 36px;
   }
   footer div.contact h4 {
-    font-size: 28px;
+    font-size: 26px;
   }
   footer div.contact h4.data {
     margin-top: 35px;
-    font-size: 26px;
+    font-size: 24px;
   }
   footer div.social a img {
     margin-right: 14px;
@@ -1650,7 +1652,7 @@ footer h5 {
     width: 50px;
   }
   footer h5 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -1659,18 +1661,17 @@ footer h5 {
     padding: 0 60px;
   }
   footer div.cooperation h3 {
-    font-size: 60px;
+    font-size: 58px;
   }
   footer div.cooperation h3 + h3 {
-    margin-top: 20px;
-    font-size: 54px;
+    font-size: 44px;
   }
   footer div.contact h4 {
-    font-size: 38px;
+    font-size: 34px;
   }
   footer div.contact h4.data {
     margin-top: 45px;
-    font-size: 36px;
+    font-size: 32px;
   }
   footer div.social a {
     margin-right: 24px;
@@ -1680,7 +1681,7 @@ footer h5 {
     width: 70px;
   }
   footer h5 {
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 
