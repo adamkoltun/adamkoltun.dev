@@ -23,6 +23,10 @@ nav.nav {
                 text-decoration: none;
             }
         }
+
+        li:hover a {
+            color: #707070;
+        }
     }
 
     @media (orientation: landscape) {

@@ -54,6 +54,10 @@ nav.nav ul li a {
   text-decoration: none;
 }
 
+nav.nav ul li:hover a {
+  color: #707070;
+}
+
 @media (orientation: landscape) {
   nav.nav ul li a {
     font-size: 30px;
