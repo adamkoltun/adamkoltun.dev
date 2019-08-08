@@ -815,7 +815,7 @@ main section.projects div.wrapper div.project p + a > p,
 main section.projects div.wrapper div.project p + p {
   color: #6f6f6f;
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 main section.projects div.wrapper div.project img {
@@ -823,10 +823,72 @@ main section.projects div.wrapper div.project img {
   width: 100%;
 }
 
-main section.projects div.wrapper div.project.in-progress img {
-  display: block;
-  margin: 0 auto;
-  width: 30%;
+main section.projects div.wrapper div.project div.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section.projects div.wrapper div.project div.loader svg.circular-loader {
+  height: 100%;
+  width: 45%;
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+}
+
+main section.projects div.wrapper div.project div.loader svg.circular-loader circle.loader-path {
+  stroke-dasharray: 150, 200;
+  stroke-dashoffset: -10;
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
 }
 
 @media (orientation: landscape) {
@@ -938,48 +1000,49 @@ main section.projects div.wrapper div.project.in-progress img {
   main section.introduction div.quotation h3 {
     -ms-flex-preferred-size: 70vw;
         flex-basis: 70vw;
-    font-size: 52px;
+    font-size: 48px;
   }
   main section.introduction section.about-me {
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin-top: 80px;
+    margin: 80px 0;
   }
   main section.introduction section.about-me div {
-    -ms-flex-preferred-size: 42vw;
-        flex-basis: 42vw;
-    margin-bottom: 80px;
+    -ms-flex-preferred-size: 38vw;
+        flex-basis: 38vw;
+    margin-bottom: 60px;
   }
   main section.introduction section.about-me div p {
-    font-size: 20px;
+    font-size: 18px;
   }
   main section.offer {
     padding: 60px 50px;
-  }
-  main section.offer div p {
-    font-size: 20px;
-  }
-  main section.offer div h4 {
-    margin: 32px 0 45px 0;
-    font-size: 36px;
-  }
-  main section.offer div.wrap p {
-    line-height: 1.5em;
   }
   main section.offer div.proffer::before {
     margin-bottom: 25px;
   }
   main section.offer div.proffer h3 {
-    -ms-flex-preferred-size: 45vw;
-        flex-basis: 45vw;
+    -ms-flex-preferred-size: 40vw;
+        flex-basis: 40vw;
     font-size: 28px;
+    line-height: 1.1em;
+  }
+  main section.offer div p {
+    font-size: 18px;
+  }
+  main section.offer div h4 {
+    margin: 32px 0 45px 0;
+    font-size: 30px;
+  }
+  main section.offer div.wrap p {
+    line-height: 1.5em;
   }
   main section.projects {
     padding: 0 30px;
     min-height: 60vh;
   }
   main section.projects h3 {
-    font-size: 40px;
+    font-size: 38px;
   }
   main section.projects div.wrapper {
     -ms-flex-pack: distribute;
@@ -990,11 +1053,11 @@ main section.projects div.wrapper div.project.in-progress img {
         flex-basis: 45%;
   }
   main section.projects div.wrapper div.project p {
-    font-size: 20px;
+    font-size: 18px;
   }
   main section.projects div.wrapper div.project p + a > p,
   main section.projects div.wrapper div.project p + p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1003,45 +1066,41 @@ main section.projects div.wrapper div.project.in-progress img {
     margin: 80px 0 0 60px;
   }
   main section.introduction div.quotation h3 {
-    font-size: 62px;
+    font-size: 60px;
   }
   main section.introduction section.about-me {
-    margin-top: 100px;
+    margin: 110px 0;
   }
   main section.introduction section.about-me div {
-    -ms-flex-preferred-size: 40vw;
-        flex-basis: 40vw;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
   main section.introduction section.about-me div p {
-    font-size: 30px;
+    font-size: 22px;
   }
   main section.offer {
     padding: 80px 70px;
-  }
-  main section.offer div {
-    margin-bottom: 150px;
-  }
-  main section.offer div p {
-    font-size: 30px;
-  }
-  main section.offer div h4 {
-    margin: 52px 0 65px 0;
-    font-size: 56px;
   }
   main section.offer div.proffer::before {
     margin-bottom: 45px;
   }
   main section.offer div.proffer h3 {
-    -ms-flex-preferred-size: 50vw;
-        flex-basis: 50vw;
     font-size: 38px;
+  }
+  main section.offer div {
+    margin-bottom: 150px;
+  }
+  main section.offer div p {
+    font-size: 24px;
+  }
+  main section.offer div h4 {
+    margin: 70px 0 83px 0;
+    font-size: 40px;
   }
   main section.projects {
     padding: 0 45px;
   }
   main section.projects h3 {
-    font-size: 56px;
+    font-size: 48px;
   }
   main section.projects div.wrapper {
     -webkit-box-pack: justify;
@@ -1049,7 +1108,7 @@ main section.projects div.wrapper div.project.in-progress img {
             justify-content: space-between;
   }
   main section.projects div.wrapper div.project p {
-    font-size: 30px;
+    font-size: 22px;
   }
 }
 

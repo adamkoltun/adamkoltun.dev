@@ -186,7 +186,7 @@ main {
                 p+p {
                     color: #6f6f6f;
                     font-weight: 300;
-                    margin-bottom: 10px;
+                    margin-bottom: 15px;
                 }
 
                 img {
@@ -194,14 +194,46 @@ main {
                     width: 100%;
                 }
 
-                &.in-progress {
+                div.loader {
+                    display: flex;
+                    justify-content: center;
 
-                    img {
-                        display: block;
-                        margin: 0 auto;
-                        width: 30%;
+                    svg.circular-loader {
+                        height: 100%;
+                        width: 45%;
+                        animation: rotate 2s linear infinite;
+
+                        circle.loader-path {
+                            stroke-dasharray: 150, 200;
+                            stroke-dashoffset: -10;
+                            animation: dash 1.5s ease-in-out infinite;
+                            stroke-linecap: round;
+                        }
                     }
                 }
+            }
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes dash {
+            0% {
+                stroke-dasharray: 1, 200;
+                stroke-dashoffset: 0;
+            }
+
+            50% {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -35;
+            }
+
+            100% {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -124;
             }
         }
     }
@@ -349,20 +381,20 @@ main {
 
                 h3 {
                     flex-basis: 70vw;
-                    font-size: 52px;
+                    font-size: 48px;
                 }
             }
 
             section.about-me {
                 justify-content: space-around;
-                margin-top: 80px;
+                margin: 80px 0;
 
                 div {
-                    flex-basis: 42vw;
-                    margin-bottom: 80px;
+                    flex-basis: 38vw;
+                    margin-bottom: 60px;
 
                     p {
-                        font-size: 20px;
+                        font-size: 18px;
                     }
                 }
             }
@@ -371,31 +403,32 @@ main {
         section.offer {
             padding: 60px 50px;
 
-            div {
-                p {
-                    font-size: 20px;
-                }
-
-                h4 {
-                    margin: 32px 0 45px 0;
-                    font-size: 36px;
-                }
-            }
-
-            div.wrap {
-                p {
-                    line-height: 1.5em;
-                }
-            }
-
             div.proffer::before {
                 margin-bottom: 25px;
             }
 
             div.proffer {
                 h3 {
-                    flex-basis: 45vw;
+                    flex-basis: 40vw;
                     font-size: 28px;
+                    line-height: 1.1em;
+                }
+            }
+
+            div {
+                p {
+                    font-size: 18px;
+                }
+
+                h4 {
+                    margin: 32px 0 45px 0;
+                    font-size: 30px;
+                }
+            }
+
+            div.wrap {
+                p {
+                    line-height: 1.5em;
                 }
             }
         }
@@ -405,7 +438,7 @@ main {
             min-height: 60vh;
 
             h3 {
-                font-size: 40px;
+                font-size: 38px;
             }
 
             div.wrapper {
@@ -415,12 +448,12 @@ main {
                     flex-basis: 45%;
 
                     p {
-                        font-size: 20px;
+                        font-size: 18px;
                     }
 
                     p+a>p,
                     p+p {
-                        margin-bottom: 15px;
+                        margin-bottom: 20px;
                     }
                 }
             }
@@ -433,19 +466,18 @@ main {
                 margin: 80px 0 0 60px;
 
                 h3 {
-                    font-size: 62px;
+                    font-size: 60px;
                 }
             }
 
             section.about-me {
-                margin-top: 100px;
+                margin: 110px 0;
 
                 div {
-                    flex-basis: 40vw;
-                    margin-bottom: 100px;
+                    margin-bottom: 80px;
 
                     p {
-                        font-size: 30px;
+                        font-size: 22px;
                     }
                 }
             }
@@ -454,27 +486,26 @@ main {
         section.offer {
             padding: 80px 70px;
 
-            div {
-                margin-bottom: 150px;
-
-                p {
-                    font-size: 30px;
-                }
-
-                h4 {
-                    margin: 52px 0 65px 0;
-                    font-size: 56px;
-                }
-            }
-
             div.proffer::before {
                 margin-bottom: 45px;
             }
 
             div.proffer {
                 h3 {
-                    flex-basis: 50vw;
                     font-size: 38px;
+                }
+            }
+
+            div {
+                margin-bottom: 150px;
+
+                p {
+                    font-size: 24px;
+                }
+
+                h4 {
+                    margin: 70px 0 83px 0;
+                    font-size: 40px;
                 }
             }
         }
@@ -483,7 +514,7 @@ main {
             padding: 0 45px;
 
             h3 {
-                font-size: 56px;
+                font-size: 48px;
             }
 
             div.wrapper {
@@ -491,7 +522,7 @@ main {
 
                 div.project {
                     p {
-                        font-size: 30px;
+                        font-size: 22px;
                     }
                 }
             }
