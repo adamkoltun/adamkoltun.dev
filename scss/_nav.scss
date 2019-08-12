@@ -120,6 +120,16 @@ nav.nav {
         }
     }
 
+    @media (min-width: 1440px) {
+        ul {
+            li {
+                a {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+
     @media (min-width: 1600px) {
         ul {
             li {
