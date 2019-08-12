@@ -791,6 +791,12 @@ main {
     @media (min-width:1440px) {
         section.offer {
 
+            div.proffer {
+                h3 {
+                    flex-basis: 30vw;
+                }
+            }
+
             div.web,
             div.ui,
             div.seo {
@@ -845,7 +851,6 @@ main {
 
             div.proffer {
                 h3 {
-                    flex-basis: 30vw;
                     font-size: 60px;
                 }
             }

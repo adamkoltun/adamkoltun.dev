@@ -1334,6 +1334,10 @@ main section.projects div.wrapper div.project div.loader svg.circular-loader cir
 }
 
 @media (min-width: 1440px) {
+  main section.offer div.proffer h3 {
+    -ms-flex-preferred-size: 30vw;
+        flex-basis: 30vw;
+  }
   main section.offer div.web,
   main section.offer div.ui,
   main section.offer div.seo {
@@ -1380,8 +1384,6 @@ main section.projects div.wrapper div.project div.loader svg.circular-loader cir
     padding: 125px 175px;
   }
   main section.offer div.proffer h3 {
-    -ms-flex-preferred-size: 30vw;
-        flex-basis: 30vw;
     font-size: 60px;
   }
   main section.offer p.aside {
