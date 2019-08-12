@@ -142,9 +142,8 @@ main {
     section.projects {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 0.8fr;
+        grid-template-rows: 0.3fr 0.7fr;
         grid-template-areas: 'projects''elements';
-        min-height: 100vh;
         padding: 0 20px;
 
         h3 {
@@ -200,7 +199,7 @@ main {
 
                     svg.circular-loader {
                         height: 100%;
-                        width: 45%;
+                        width: 40%;
                         animation: rotate 2s linear infinite;
 
                         circle.loader-path {
