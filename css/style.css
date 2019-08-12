@@ -300,7 +300,7 @@ header section.essential div.social-media a {
   margin-right: 8px;
 }
 
-header section.essential div.social-media a img {
+header section.essential div.social-media a svg {
   height: 30px;
   width: 30px;
 }
@@ -323,7 +323,7 @@ header section.essential div.social-media a:nth-last-of-type(1) {
     -ms-flex-item-align: end;
         align-self: flex-end;
   }
-  header section.essential div.social-media a img {
+  header section.essential div.social-media a svg {
     height: 34px;
     width: 34px;
   }
@@ -343,7 +343,7 @@ header section.essential div.social-media a:nth-last-of-type(1) {
   header section.essential div.features p {
     font-size: 17px;
   }
-  header section.essential div.social-media a img {
+  header section.essential div.social-media a svg {
     height: 34px;
     width: 34px;
   }
@@ -359,7 +359,7 @@ header section.essential div.social-media a:nth-last-of-type(1) {
   header section.essential div.features p {
     font-size: 18px;
   }
-  header section.essential div.social-media a img {
+  header section.essential div.social-media a svg {
     height: 40px;
     width: 40px;
   }
@@ -389,7 +389,7 @@ header section.essential div.social-media a:nth-last-of-type(1) {
   header section.essential div.social-media a {
     margin-right: 14px;
   }
-  header section.essential div.social-media a img {
+  header section.essential div.social-media a svg {
     height: 50px;
     width: 50px;
   }
@@ -429,7 +429,7 @@ header section.essential div.social-media a:nth-last-of-type(1) {
   header section.essential div.social-media a {
     margin-right: 24px;
   }
-  header section.essential div.social-media a img {
+  header section.essential div.social-media a svg {
     height: 70px;
     width: 70px;
   }
@@ -464,7 +464,7 @@ header section.essential div.social-media a:nth-last-of-type(1) {
   header section.essential div.social-media a {
     margin-right: 16px;
   }
-  header section.essential div.social-media a img {
+  header section.essential div.social-media a svg {
     height: 45px;
     width: 45px;
   }
@@ -483,7 +483,7 @@ header section.essential div.social-media a:nth-last-of-type(1) {
   header section.essential div.social-media a {
     margin-right: 20px;
   }
-  header section.essential div.social-media a img {
+  header section.essential div.social-media a svg {
     height: 50px;
     width: 50px;
   }
@@ -506,7 +506,7 @@ header section.essential div.social-media a:nth-last-of-type(1) {
   header section.essential div.social-media a {
     margin-right: 22px;
   }
-  header section.essential div.social-media a img {
+  header section.essential div.social-media a svg {
     height: 55px;
     width: 55px;
   }
@@ -1489,9 +1489,10 @@ footer div.social a {
   margin-right: 8px;
 }
 
-footer div.social a img {
+footer div.social a svg {
   height: 30px;
   width: 30px;
+  fill: #fff;
 }
 
 footer div.social a:nth-last-of-type(1) {
@@ -1551,7 +1552,7 @@ footer h5 {
 }
 
 @media (min-width: 360px) and (orientation: portrait) {
-  footer div.social a img {
+  footer div.social a svg {
     height: 34px;
     width: 34px;
   }
@@ -1574,7 +1575,7 @@ footer h5 {
     margin-top: 15px;
     font-size: 16px;
   }
-  footer div.social a img {
+  footer div.social a svg {
     height: 34px;
     width: 34px;
   }
@@ -1597,7 +1598,7 @@ footer h5 {
     margin-top: 20px;
     font-size: 18px;
   }
-  footer div.social a img {
+  footer div.social a svg {
     height: 40px;
     width: 40px;
   }
@@ -1625,7 +1626,7 @@ footer h5 {
     margin-top: 35px;
     font-size: 24px;
   }
-  footer div.social a img {
+  footer div.social a svg {
     margin-right: 14px;
     height: 50px;
     width: 50px;
@@ -1655,7 +1656,7 @@ footer h5 {
   footer div.social a {
     margin-right: 24px;
   }
-  footer div.social a img {
+  footer div.social a svg {
     height: 70px;
     width: 70px;
   }
@@ -1688,7 +1689,7 @@ footer h5 {
   footer div.social a {
     margin-right: 16px;
   }
-  footer div.social a img {
+  footer div.social a svg {
     height: 45px;
     width: 45px;
   }
@@ -1721,7 +1722,7 @@ footer h5 {
   footer div.social a {
     margin-right: 20px;
   }
-  footer div.social a img {
+  footer div.social a svg {
     height: 50px;
     width: 50px;
   }
@@ -1767,7 +1768,7 @@ footer h5 {
   footer div.social a {
     margin-right: 22px;
   }
-  footer div.social a img {
+  footer div.social a svg {
     height: 55px;
     width: 55px;
   }
@@ -1776,3 +1777,4 @@ footer h5 {
     font-size: 18px;
   }
 }
+/*# sourceMappingURL=style.css.map */
