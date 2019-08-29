@@ -8,14 +8,25 @@ main {
         div.quotation {
             grid-area: quotation;
             display: flex;
+            flex-flow: row wrap;
             justify-content: center;
-            align-items: center;
+            align-content: center;
 
             h3 {
                 flex-basis: 85vw;
                 font-size: 34px;
                 font-weight: 400;
                 line-height: 1.3em;
+            }
+
+            div.author {
+                margin-top: 15px;
+                flex-basis: 85vw;
+
+                p {
+                    font-size: 15px;
+                    color: #6f6f6f;
+                }
             }
         }
 
@@ -246,6 +257,15 @@ main {
                 h3 {
                     flex-basis: 70vw;
                 }
+
+                div.author {
+                    display: flex;
+                    flex-basis: 70vw;
+
+                    p+p {
+                        margin-left: 4px;
+                    }
+                }
             }
 
             section.about-me {
@@ -290,7 +310,9 @@ main {
     @media (min-width: 360px) and (orientation: portrait) {
         section.introduction {
             div.quotation {
-                h3 {
+
+                h3,
+                div.author {
                     flex-basis: 74vw;
                 }
             }
@@ -331,7 +353,9 @@ main {
     @media (min-width: 730px) and (orientation: landscape) {
         section.introduction {
             div.quotation {
-                h3 {
+
+                h3,
+                div.author {
                     flex-basis: 55vw;
                 }
             }
@@ -381,6 +405,14 @@ main {
                 h3 {
                     flex-basis: 70vw;
                     font-size: 48px;
+                }
+
+                div.author {
+                    flex-basis: 70vw;
+
+                    p {
+                        font-size: 16px;
+                    }
                 }
             }
 
@@ -466,6 +498,14 @@ main {
 
                 h3 {
                     font-size: 60px;
+                }
+
+                div.author {
+                    margin-top: 25px;
+
+                    p {
+                        font-size: 20px;
+                    }
                 }
             }
 
@@ -722,6 +762,11 @@ main {
                     flex-basis: 50vw;
                     font-size: 56px;
                 }
+
+                div.author {
+                    flex-basis: 50vw;
+                    margin-top: 30px;
+                }
             }
 
             section.about-me {
@@ -830,6 +875,14 @@ main {
                     flex-basis: 46vw;
                     font-size: 72px;
                     line-height: 1.2em;
+                }
+
+                div.author {
+                    flex-basis: 46vw;
+
+                    p {
+                        font-size: 16px;
+                    }
                 }
             }
 
