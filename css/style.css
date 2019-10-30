@@ -180,19 +180,14 @@ header section.top-bar {
           align-items: center;
   height: 60px;
   width: 100vw;
-  background-color: #fff;
-  -webkit-transition: background-color .3s .1s linear, -webkit-transform .3s ease;
-  transition: background-color .3s .1s linear, -webkit-transform .3s ease;
-  transition: background-color .3s .1s linear, transform .3s ease;
-  transition: background-color .3s .1s linear, transform .3s ease, -webkit-transform .3s ease;
-  will-change: transform;
+  background-color: transparent;
   z-index: 1;
 }
 
 header section.top-bar .hamburger {
   display: inline-block;
-  padding: 10px;
-  margin-right: 8px;
+  padding: 8px;
+  margin-right: 10px;
   border: 0;
   border-radius: 50%;
   background-color: black;
@@ -234,10 +229,6 @@ header section.top-bar .hamburger__inner::before {
 header section.top-bar .hamburger__inner::after {
   -webkit-transform: translateY(3px);
           transform: translateY(3px);
-}
-
-header section.top-bar.on {
-  background-color: transparent;
 }
 
 header section.top-bar.on .hamburger__inner::before {
@@ -390,7 +381,7 @@ header section.essential div.social-media a:nth-last-of-type(1) {
     height: 90px;
   }
   header section.top-bar .hamburger {
-    padding: 20px;
+    padding: 16px;
     margin-right: 16px;
   }
   header section.top-bar .hamburger__box {
@@ -437,7 +428,7 @@ header section.essential div.social-media a:nth-last-of-type(1) {
     height: 120px;
   }
   header section.top-bar .hamburger {
-    padding: 25px;
+    padding: 20px;
     margin-right: 20px;
   }
   header section.top-bar .hamburger__box {

@@ -13,15 +13,13 @@ header {
     align-items: center;
     height: 60px;
     width: 100vw;
-    background-color: #fff;
-    transition: background-color .3s .1s linear, transform .3s ease;
-    will-change: transform;
+    background-color: transparent;
     z-index: 1;
 
     .hamburger {
       display: inline-block;
-      padding: 10px;
-      margin-right: 8px;
+      padding: 8px;
+      margin-right: 10px;
       border: 0;
       border-radius: 50%;
       background-color: black;
@@ -62,8 +60,6 @@ header {
   }
 
   section.top-bar.on {
-    background-color: transparent;
-
     .hamburger {
 
       &__inner::before {
@@ -227,7 +223,7 @@ header {
       height: 90px;
 
       .hamburger {
-        padding: 20px;
+        padding: 16px;
         margin-right: 16px;
 
         &__box {
@@ -293,7 +289,7 @@ header {
       height: 120px;
 
       .hamburger {
-        padding: 25px;
+        padding: 20px;
         margin-right: 20px;
 
         &__box {
