@@ -178,7 +178,7 @@ header section.top-bar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 50px;
+  height: 60px;
   width: 100vw;
   background-color: #fff;
   -webkit-transition: background-color .3s .1s linear, -webkit-transform .3s ease;
@@ -189,45 +189,65 @@ header section.top-bar {
   z-index: 1;
 }
 
-header section.top-bar div.hamburger {
-  padding: 12px 24px;
+header section.top-bar .hamburger {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 8px;
+  border: 0;
+  border-radius: 50%;
+  background-color: black;
 }
 
-header section.top-bar div.hamburger span,
-header section.top-bar div.hamburger span::after {
+header section.top-bar .hamburger__box {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+header section.top-bar .hamburger__inner {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header section.top-bar .hamburger__inner::before, header section.top-bar .hamburger__inner::after {
   content: '';
-  display: block;
-  width: 22px;
+  position: absolute;
+  left: 0;
+  width: 20px;
   height: 1px;
-  background-color: #000;
-  -webkit-transition: background-color .1s linear, -webkit-transform .2s .1s linear;
-  transition: background-color .1s linear, -webkit-transform .2s .1s linear;
-  transition: transform .2s .1s linear, background-color .1s linear;
-  transition: transform .2s .1s linear, background-color .1s linear, -webkit-transform .2s .1s linear;
+  background-color: white;
+  -webkit-transition: -webkit-transform .2s .1s linear;
+  transition: -webkit-transform .2s .1s linear;
+  transition: transform .2s .1s linear;
+  transition: transform .2s .1s linear, -webkit-transform .2s .1s linear;
 }
 
-header section.top-bar div.hamburger span::after {
-  -webkit-transform: translateY(6px);
-          transform: translateY(6px);
+header section.top-bar .hamburger__inner::before {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+header section.top-bar .hamburger__inner::after {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
 
 header section.top-bar.on {
   background-color: transparent;
 }
 
-header section.top-bar.on div.hamburger span,
-header section.top-bar.on div.hamburger span::after {
-  background-color: #fff;
+header section.top-bar.on .hamburger__inner::before {
+  -webkit-transform: translateY(0) rotate(45deg);
+          transform: translateY(0) rotate(45deg);
 }
 
-header section.top-bar.on div.hamburger span {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-header section.top-bar.on div.hamburger span::after {
-  -webkit-transform: translate(0) rotate(-90deg);
-          transform: translate(0) rotate(-90deg);
+header section.top-bar.on .hamburger__inner::after {
+  -webkit-transform: translateY(0) rotate(-45deg);
+          transform: translateY(0) rotate(-45deg);
 }
 
 header section.introduction {
@@ -366,13 +386,27 @@ header section.essential div.social-media a:nth-last-of-type(1) {
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-  header section.top-bar div.hamburger {
-    padding: 20px 24px;
+  header section.top-bar {
+    height: 90px;
   }
-  header section.top-bar div.hamburger span,
-  header section.top-bar div.hamburger span::after {
+  header section.top-bar .hamburger {
+    padding: 20px;
+    margin-right: 16px;
+  }
+  header section.top-bar .hamburger__box {
     width: 34px;
-    height: 2px;
+    height: 34px;
+  }
+  header section.top-bar .hamburger__inner::before, header section.top-bar .hamburger__inner::after {
+    width: 34px;
+  }
+  header section.top-bar .hamburger__inner::before {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  header section.top-bar .hamburger__inner::after {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
   }
   header section.introduction div.container h1 {
     font-size: 36px;
@@ -400,19 +434,27 @@ header section.essential div.social-media a:nth-last-of-type(1) {
 
 @media (min-width: 1024px) and (orientation: portrait) {
   header section.top-bar {
-    height: 100px;
+    height: 120px;
   }
-  header section.top-bar div.hamburger {
-    padding: 30px 30px;
+  header section.top-bar .hamburger {
+    padding: 25px;
+    margin-right: 20px;
   }
-  header section.top-bar div.hamburger span,
-  header section.top-bar div.hamburger span::after {
+  header section.top-bar .hamburger__box {
+    width: 45px;
+    height: 45px;
+  }
+  header section.top-bar .hamburger__inner::before, header section.top-bar .hamburger__inner::after {
     width: 45px;
     height: 2px;
   }
-  header section.top-bar div.hamburger span::after {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+  header section.top-bar .hamburger__inner::before {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  header section.top-bar .hamburger__inner::after {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
   }
   header section.introduction div.container h1 {
     font-size: 50px;
@@ -555,12 +597,15 @@ main section.introduction div.quotation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 main section.introduction div.quotation h3 {
@@ -569,6 +614,17 @@ main section.introduction div.quotation h3 {
   font-size: 34px;
   font-weight: 400;
   line-height: 1.3em;
+}
+
+main section.introduction div.quotation div.author {
+  margin-top: 15px;
+  -ms-flex-preferred-size: 85vw;
+      flex-basis: 85vw;
+}
+
+main section.introduction div.quotation div.author p {
+  font-size: 15px;
+  color: #6f6f6f;
 }
 
 main section.introduction section.about-me {
@@ -879,6 +935,16 @@ main section.projects div.wrapper div.project div.loader svg.circular-loader cir
     -ms-flex-preferred-size: 70vw;
         flex-basis: 70vw;
   }
+  main section.introduction div.quotation div.author {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 70vw;
+        flex-basis: 70vw;
+  }
+  main section.introduction div.quotation div.author p + p {
+    margin-left: 4px;
+  }
   main section.introduction section.about-me {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -915,7 +981,8 @@ main section.projects div.wrapper div.project div.loader svg.circular-loader cir
 }
 
 @media (min-width: 360px) and (orientation: portrait) {
-  main section.introduction div.quotation h3 {
+  main section.introduction div.quotation h3,
+  main section.introduction div.quotation div.author {
     -ms-flex-preferred-size: 74vw;
         flex-basis: 74vw;
   }
@@ -945,7 +1012,8 @@ main section.projects div.wrapper div.project div.loader svg.circular-loader cir
 }
 
 @media (min-width: 730px) and (orientation: landscape) {
-  main section.introduction div.quotation h3 {
+  main section.introduction div.quotation h3,
+  main section.introduction div.quotation div.author {
     -ms-flex-preferred-size: 55vw;
         flex-basis: 55vw;
   }
@@ -978,6 +1046,13 @@ main section.projects div.wrapper div.project div.loader svg.circular-loader cir
     -ms-flex-preferred-size: 70vw;
         flex-basis: 70vw;
     font-size: 48px;
+  }
+  main section.introduction div.quotation div.author {
+    -ms-flex-preferred-size: 70vw;
+        flex-basis: 70vw;
+  }
+  main section.introduction div.quotation div.author p {
+    font-size: 16px;
   }
   main section.introduction section.about-me {
     -ms-flex-pack: distribute;
@@ -1044,6 +1119,12 @@ main section.projects div.wrapper div.project div.loader svg.circular-loader cir
   }
   main section.introduction div.quotation h3 {
     font-size: 60px;
+  }
+  main section.introduction div.quotation div.author {
+    margin-top: 25px;
+  }
+  main section.introduction div.quotation div.author p {
+    font-size: 20px;
   }
   main section.introduction section.about-me {
     margin: 110px 0;
@@ -1288,6 +1369,11 @@ main section.projects div.wrapper div.project div.loader svg.circular-loader cir
         flex-basis: 50vw;
     font-size: 56px;
   }
+  main section.introduction div.quotation div.author {
+    -ms-flex-preferred-size: 50vw;
+        flex-basis: 50vw;
+    margin-top: 30px;
+  }
   main section.introduction section.about-me {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -1371,6 +1457,13 @@ main section.projects div.wrapper div.project div.loader svg.circular-loader cir
         flex-basis: 46vw;
     font-size: 72px;
     line-height: 1.2em;
+  }
+  main section.introduction div.quotation div.author {
+    -ms-flex-preferred-size: 46vw;
+        flex-basis: 46vw;
+  }
+  main section.introduction div.quotation div.author p {
+    font-size: 16px;
   }
   main section.introduction section.about-me {
     margin: 100px 0;
@@ -1464,7 +1557,11 @@ footer div.contact {
 footer div.contact h4 {
   font-size: 18px;
   font-weight: 400;
+}
+
+footer div.contact a {
   color: #fff;
+  text-decoration: none;
 }
 
 footer div.contact h4.data {

@@ -11,28 +11,52 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 50px;
+    height: 60px;
     width: 100vw;
     background-color: #fff;
     transition: background-color .3s .1s linear, transform .3s ease;
     will-change: transform;
     z-index: 1;
 
-    div.hamburger {
-      padding: 12px 24px;
+    .hamburger {
+      display: inline-block;
+      padding: 10px;
+      margin-right: 8px;
+      border: 0;
+      border-radius: 50%;
+      background-color: black;
 
-      span,
-      span::after {
-        content: '';
-        display: block;
-        width: 22px;
-        height: 1px;
-        background-color: #000;
-        transition: transform .2s .1s linear, background-color .1s linear;
+      &__box {
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 20px;
       }
 
-      span::after {
-        transform: translateY(6px)
+      &__inner {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &__inner::before,
+      &__inner::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 1px;
+        background-color: white;
+        transition: transform .2s .1s linear;
+      }
+
+      &__inner::before {
+        transform: translateY(-3px);
+      }
+
+      &__inner::after {
+        transform: translateY(3px);
       }
     }
   }
@@ -40,19 +64,14 @@ header {
   section.top-bar.on {
     background-color: transparent;
 
-    div.hamburger {
+    .hamburger {
 
-      span,
-      span::after {
-        background-color: #fff;
+      &__inner::before {
+        transform: translateY(0) rotate(45deg);
       }
 
-      span {
-        transform: rotate(45deg)
-      }
-
-      span::after {
-        transform: translate(0) rotate(-90deg)
+      &__inner::after {
+        transform: translateY(0) rotate(-45deg);
       }
     }
   }
@@ -205,13 +224,28 @@ header {
 
   @media(min-width: 768px) and (orientation: portrait) {
     section.top-bar {
-      div.hamburger {
-        padding: 20px 24px;
+      height: 90px;
 
-        span,
-        span::after {
+      .hamburger {
+        padding: 20px;
+        margin-right: 16px;
+
+        &__box {
           width: 34px;
-          height: 2px;
+          height: 34px;
+        }
+
+        &__inner::before,
+        &__inner::after {
+          width: 34px;
+        }
+
+        &__inner::before {
+          transform: translateY(-5px);
+        }
+
+        &__inner::after {
+          transform: translateY(5px);
         }
       }
     }
@@ -256,19 +290,29 @@ header {
 
   @media(min-width: 1024px) and (orientation: portrait) {
     section.top-bar {
-      height: 100px;
+      height: 120px;
 
-      div.hamburger {
-        padding: 30px 30px;
+      .hamburger {
+        padding: 25px;
+        margin-right: 20px;
 
-        span,
-        span::after {
+        &__box {
+          width: 45px;
+          height: 45px;
+        }
+
+        &__inner::before,
+        &__inner::after {
           width: 45px;
           height: 2px;
         }
 
-        span::after {
-          transform: translateY(10px)
+        &__inner::before {
+          transform: translateY(-6px);
+        }
+
+        &__inner::after {
+          transform: translateY(6px);
         }
       }
     }
