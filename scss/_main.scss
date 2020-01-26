@@ -161,6 +161,7 @@ main {
             grid-area: projects;
             display: flex;
             align-items: center;
+            justify-content: space-around;
             font-size: 26px;
             font-weight: 400;
         }
@@ -473,7 +474,7 @@ main {
             }
 
             div.wrapper {
-                justify-content: space-around;
+                justify-content: space-between;
 
                 div.project {
                     flex-basis: 45%;
@@ -557,8 +558,6 @@ main {
             }
 
             div.wrapper {
-                justify-content: space-between;
-
                 div.project {
                     p {
                         font-size: 22px;
@@ -853,12 +852,10 @@ main {
             padding: 0 80px;
 
             div.wrapper {
-                justify-content: flex-start;
                 padding-top: 25px;
 
                 div.project {
-                    flex-basis: 33%;
-                    margin-right: 100px;
+                    flex-basis: 30%;
                 }
             }
         }
@@ -936,6 +933,7 @@ main {
                 padding-top: 50px;
 
                 div.project {
+
                     p {
                         font-size: 20px;
                     }
